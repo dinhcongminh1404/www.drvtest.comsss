@@ -19,9 +19,9 @@ document.getElementById('btnFetch').addEventListener('click', function() {
                 // Lưu ý: Thay đổi item.Name, item.Value... cho đúng với tên cột trong Google Sheet của bạn
                 const cardHTML = `
                     <div class="card-item">
-                        <span class="status-badge">ID: ${item.id || 'N/A'}</span>
-                        <h3>${item.title || item.Name || 'Không có tiêu đề'}</h3>
-                        <p><strong>Thông tin:</strong> ${item.description || item.Content || '...'}</p>
+                        <span class="status-badge">ID: ${item.ID || 'N/A'}</span>
+                        <h3>${item.Ten || item.ChucVu || 'Không có tiêu đề'}</h3>
+                        <p><strong>Thông tin:</strong> ${item.Email}</p>
                         <p style="color: #888; font-size: 12px;">Cập nhật: ${new Date().toLocaleDateString()}</p>
                     </div>
                 `;
@@ -35,4 +35,5 @@ document.getElementById('btnFetch').addEventListener('click', function() {
             loading.style.display = "none";
             btn.disabled = false;
         });
+
 });
